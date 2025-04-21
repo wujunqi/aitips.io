@@ -26,12 +26,12 @@ export function FooterBottom() {
           </span>
         </Link>
         {/* <span className="mx-2.5 text-gray-400">|</span>
-        <Link href="/feed.xml" aria-label="RSS Feed" data-umami-event="rss-feed" prefetch={false}>
+        <Link href="/feed.xml" aria-label="RSS 订阅" data-umami-event="rss-feed" prefetch={false}>
           <Rss strokeWidth={1.5} size={20} />
         </Link>
         <Link
           href={SITE_METADATA.analytics.umamiAnalytics.shareUrl}
-          aria-label="Open analytics"
+          aria-label="打开分析"
           data-umami-event="footer-analytics"
           className="ml-2"
         >

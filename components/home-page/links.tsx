@@ -5,31 +5,31 @@ import { SITE_METADATA } from '~/data/site-metadata'
 
 const LINKS = [
   {
-    title: `What have I built?`,
+    title: `我构建了什么？`,
     href: `/projects`,
     emoji: 'man-technologist',
     event: 'home-link-projects',
   },
   {
-    title: `My writings`,
+    title: `我的文章`,
     href: `/blog`,
     emoji: 'memo',
     event: 'home-link-blog',
   },
   {
-    title: `Snippets collection`,
+    title: `代码片段收藏`,
     href: `/snippets`,
     emoji: 'dna',
     event: 'home-link-snippets',
   },
   {
-    title: `About me & this blog`,
+    title: `关于我和这个博客`,
     href: `/about`,
     emoji: 'smiling-face-with-sunglasses',
     event: 'home-link-about',
   },
   {
-    title: `Traffic and insights`,
+    title: `流量和统计`,
     href: SITE_METADATA.analytics.umamiAnalytics.shareUrl,
     emoji: 'bar-chart',
     event: 'home-link-analytics',

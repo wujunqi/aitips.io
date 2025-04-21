@@ -25,14 +25,14 @@ export function Home({
             <Intro />
             <TypedBios />
             <div className="mb-6 mt-4 md:mb-8">
-              <p>I started learning to code in 2016 and have been hooked ever since.</p>
-              <p>I landed my first job as a Python coding mentor in 2017.</p>
-              <p>I have a passion for JS/TS, web dev, and eCommerce.</p>
-              <p>I started this blog to document and share my knowledge & experience.</p>
+              <p>我在2016年开始学习编程，从那时起就爱上了它。</p>
+              <p>2017年，我获得了第一份工作，担任Python编程导师。</p>
+              <p>我热爱JS/TS、网页开发和电子商务。</p>
+              <p>我创建这个博客是为了记录和分享我的知识与经验。</p>
             </div>
             <BlogLinks />
             <p className="my-6 flex md:my-8">
-              <span className="mr-2">Happy reading</span>
+              <span className="mr-2">祝您阅读愉快</span>
               <Twemoji emoji="clinking-beer-mugs" />
             </p>
           </div>

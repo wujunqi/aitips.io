@@ -15,17 +15,17 @@ import { Fragment, useEffect, useState } from 'react'
 
 const THEMES = [
   {
-    label: 'Light',
+    label: '亮色',
     value: 'light',
     icon: Sun,
   },
   {
-    label: 'Dark',
+    label: '暗色',
     value: 'dark',
     icon: MoonStar,
   },
   {
-    label: 'System',
+    label: '系统',
     value: 'system',
     icon: Monitor,
   },
@@ -35,7 +35,7 @@ export function ThemeSwitcher() {
   let [mounted, setMounted] = useState(false)
   let { theme, setTheme, resolvedTheme } = useTheme()
 
-  // When mounted on client, now we can show the UI
+  // 当在客户端挂载时，现在我们可以显示UI
   useEffect(() => setMounted(true), [])
 
   return (
@@ -45,7 +45,7 @@ export function ThemeSwitcher() {
           className="flex items-center justify-center rounded p-1.5 hover:bg-gray-200 dark:hover:bg-gray-700"
           data-umami-event="nav-theme-switcher"
         >
-          <MenuButton aria-label="Theme switcher">
+          <MenuButton aria-label="主题切换器">
             {mounted ? (
               resolvedTheme === 'dark' ? (
                 <MoonStar strokeWidth={1.5} size={22} />

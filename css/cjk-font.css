@@ -1,0 +1,105 @@
+/* 中文开发者字体配置 - 确保中英文良好显示 */
+
+:root {
+  /* 中文字体变量 */
+  --cjk-font: var(--font-source-han-sans), 'Source Han Sans SC', 'Noto Sans SC', 'PingFang SC',
+    'Microsoft YaHei', 'Hiragino Sans GB', sans-serif;
+
+  /* 编程字体变量 - 按优先级排列 */
+  --code-font-en: var(--font-jetbrains-mono), 'Fira Code', 'Source Code Pro', 'Consolas', monospace;
+
+  /* 混合等宽字体 - 用于代码块 */
+  --code-font-mix: var(--font-jetbrains-mono), 'Sarasa Mono SC', 'Source Han Sans HW SC',
+    'Microsoft YaHei Mono', monospace;
+
+  /* 为了保证中英文等宽比例，可以使用的组合 */
+  --duospace-font: var(--code-font-mix);
+}
+
+/* 应用于代码元素 */
+code,
+pre,
+samp,
+kbd {
+  font-family: var(--duospace-font);
+  font-feature-settings: 'liga' 0; /* 禁用连字，确保每个字符清晰显示 */
+}
+
+/* 确保中文字体不受影响的元素 */
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+select,
+textarea {
+  font-family: var(--cjk-font);
+}
+
+/* 针对中英文混合内容的特殊处理 */
+.mixed-content {
+  font-family: var(--cjk-font);
+}
+
+/* 代码注释的特殊处理 - 改善中文注释的显示 */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  font-family: var(--duospace-font);
+  font-style: italic;
+  color: #5c6370;
+}
+
+/* 优化中文代码显示 */
+[data-language='html'] .token.attr-value,
+[data-language='jsx'] .token.string,
+[data-language='tsx'] .token.string,
+[data-language='javascript'] .token.string,
+[data-language='typescript'] .token.string,
+[data-language='css'] .token.string,
+[data-language='scss'] .token.string,
+[data-language='python'] .token.string {
+  font-family: var(--duospace-font);
+}
+
+/* 中文字符间距微调，提高可读性 */
+.cjk-text {
+  letter-spacing: 0.05em;
+  line-height: 1.8;
+}
+
+/* 可以在控制台中查看字体是否正确加载的辅助类 */
+.font-debug::after {
+  content: '中文字体已加载 | English Font Loaded';
+  font-family: var(--duospace-font);
+  display: none;
+}
+
+/* 确保字体加载时的平滑过渡 */
+.font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* 中英文混排时的特殊处理 - 增加标点符号的间距 */
+.cjk-spacing {
+  text-spacing: trim-start allow-end trim-adjacent ideograph-alpha ideograph-numeric;
+}
+
+/* 增加对移动设备的适配 */
+@media (max-width: 640px) {
+  :root {
+    --duospace-font: var(--font-jetbrains-mono), 'Sarasa Mono SC', system-ui, sans-serif;
+  }
+
+  .cjk-text {
+    letter-spacing: 0.03em;
+  }
+}

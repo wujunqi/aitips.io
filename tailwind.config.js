@@ -74,7 +74,15 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-nunito)', ...fontFamily.sans],
         greeting: ['var(--font-playpen-sans)'],
-        mono: ['var(--font-jetbrains-mono)', ...fontFamily.mono],
+        mono: ['var(--code-font-fallback)'],
+        cjk: [
+          'Source Han Sans SC',
+          'Noto Sans SC',
+          'Microsoft YaHei',
+          'PingFang SC',
+          'Hiragino Sans GB',
+          'sans-serif',
+        ],
       },
       colors: {
         primary: colors.indigo,

@@ -21,7 +21,7 @@ export function LatestPosts({
     <div className="space-y-4 divide-y divide-gray-200 dark:divide-gray-700 md:mt-8 md:space-y-8">
       <div className="flex items-center justify-between">
         <div className="flex text-2xl font-bold sm:text-2xl sm:leading-10 md:text-4xl">
-          <span className="mr-2 md:mr-3">Latest</span>
+          <span className="mr-2 md:mr-3">最新</span>
           <button
             className={clsx(
               'underline-offset-4 transition-colors',
@@ -31,7 +31,7 @@ export function LatestPosts({
             )}
             onClick={() => setView('posts')}
           >
-            <GrowingUnderline data-umami-event="latest-posts">posts</GrowingUnderline>
+            <GrowingUnderline data-umami-event="latest-posts">文章</GrowingUnderline>
           </button>
           <span className="mx-1">/</span>
           <button
@@ -43,21 +43,23 @@ export function LatestPosts({
             )}
             onClick={() => setView('snippets')}
           >
-            <GrowingUnderline data-umami-event="latest-snippets">snippets</GrowingUnderline>
+            <GrowingUnderline data-umami-event="latest-snippets">代码片段</GrowingUnderline>
           </button>
         </div>
         <div className="flex items-center justify-end text-base font-medium leading-6">
           <Link href={view === 'posts' ? '/blog' : '/snippets'} className="" aria-label="All posts">
             <GrowingUnderline data-umami-event="all-posts">
-              <span className="hidden md:inline-block">View all {view}</span>
-              <span className="md:hidden">More</span> &rarr;
+              <span className="hidden md:inline-block">
+                查看所有{view === 'posts' ? '文章' : '代码片段'}
+              </span>
+              <span className="md:hidden">更多</span> &rarr;
             </GrowingUnderline>
           </Link>
         </div>
       </div>
       {view === 'posts' ? (
         <ul className="space-y-12 divide-gray-200 pt-6 dark:divide-gray-700 md:space-y-20 md:pt-10">
-          {!posts.length && 'No posts found.'}
+          {!posts.length && '没有找到文章。'}
           {posts.map((post, idx) => (
             <li key={post.slug}>
               <PostCardListView post={post} loading={idx === 0 ? 'eager' : 'lazy'} />
@@ -67,7 +69,7 @@ export function LatestPosts({
       ) : (
         <div className="py-10">
           <div className="grid-cols-2 gap-x-6 gap-y-10 space-y-10 md:grid md:space-y-0">
-            {!snippets.length && 'No snippets found.'}
+            {!snippets.length && '没有找到代码片段。'}
             {snippets.map((snippet) => (
               <SnippetCard snippet={snippet} key={snippet.path} />
             ))}

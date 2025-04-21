@@ -1,0 +1,52 @@
+# 博客文章标题翻译
+Key notes while working with git|使用Git时的关键笔记
+Drag and Drop API keynotes|拖放API要点
+Integrating Tailwind CSS into a React Application|将Tailwind CSS集成到React应用中
+[Part 1] Deploy and configure your website on Namecheap in the simplest way|[第1部分] 在Namecheap上以最简单的方式部署和配置您的网站
+Simplify your Node.js project with module aliases|使用模块别名简化Node.js项目
+Does JavaScript Promise.all() run in parallel or sequential?|JavaScript Promise.all()是并行运行还是顺序运行？
+How to create an image with blurry loading effect in NextJS|如何在NextJS中创建带有模糊加载效果的图像
+[Part 2] Deploy and configure your website on Namecheap in the simplest way|[第2部分] 在Namecheap上以最简单的方式部署和配置您的网站
+[Part 2] How should developers look for a new job - Interview, negotiate, and find a good company|[第2部分] 开发者如何寻找新工作 - 面试、谈判和找到好公司
+Shopify Hydrogen: build a fully functional price range filter component|Shopify Hydrogen: 构建功能完善的价格范围筛选组件
+Eliminating Render Blocking CSS and measuring page rendering time with Performance API|消除阻塞渲染的CSS并使用Performance API测量页面渲染时间
+Prevent layout shift when toggling scrollbar on Window|在切换窗口滚动条时防止布局偏移
+[Part 1] How should developers look for a new job - Building a profile|[第1部分] 开发者如何寻找新工作 - 建立个人资料
+Mastering Section Rendering APIs in Shopify Online Store 2.0|掌握Shopify在线商店2.0中的Section渲染API
+Tricky use case of Array.prototype.map in JS|JS中Array.prototype.map的棘手用例
+Migrate your Shopify store assets to a new store using File API|使用File API将Shopify商店资产迁移到新商店
+How to get your Namecheap private email to work with Vercel DNS|如何让Namecheap私人邮箱与Vercel DNS配合使用
+Introduction to Committing with Conventional Commit|常规提交方式的入门介绍
+Embedding scripts in web pages made easy with Github and jsDelivr|使用Github和jsDelivr轻松嵌入网页脚本
+On Tailwind CSS arbitrary values|关于Tailwind CSS任意值
+Minimal setup list for web developers on a fresh macOS install|新安装macOS上的Web开发者最小设置清单
+How to create an HTTPS server in localhost?|如何在localhost中创建HTTPS服务器？
+Better responsive images with srcset and sizes attributes|使用srcset和sizes属性优化响应式图像
+When to use Function Declaration vs Function Expression in JavaScript?|JavaScript中何时使用函数声明与函数表达式？
+How to make HTTP requests in Node.js without installing external libraries|如何在Node.js中不安装外部库进行HTTP请求
+
+# 代码片段标题翻译
+A custom hooks to use an async effect|使用异步效果的自定义钩子
+VSCode settings and keyboard shortcuts|VSCode设置和键盘快捷键
+How to work with Spotify's API to display currently playing track on a website?|如何使用Spotify的API在网站上显示当前播放的曲目？
+Common npm commands to use locally|常用的本地npm命令
+Synchronize React component state with local storage|将React组件状态与本地存储同步
+Verifying Github webhooks requests in Node.js|在Node.js中验证Github Webhook请求
+Adding/substracting days in Shopify's Liquid template language|在Shopify的Liquid模板语言中添加/减去天数
+Remove all falsy values from an object and its nested children|从对象及其嵌套子对象中删除所有虚值
+Macos command to zip files and directories into a single file.|Mac OS命令行压缩文件和目录到单个文件
+String casing utilities in JavaScript|JavaScript中的字符串大小写实用工具
+Validate if a string is a valid color|验证字符串是否为有效颜色
+Read all file names in a directory|读取目录中的所有文件名
+Useful array utilities|实用数组工具函数
+Ignore all files in a directory except a specific file|忽略目录中所有文件但保留特定文件
+Crawling Goodreads books data in Node.js|在Node.js中爬取Goodreads图书数据
+Enhance Github security by connecting using Secure Shell Protocol (SSH)|通过安全Shell协议(SSH)增强Github安全性
+Shopify Hydrogen Codegen Configs|Shopify Hydrogen代码生成配置
+Pnpm aliases|Pnpm别名
+Simple Event-Emitter/PubSub pattern|简单的事件发射器/发布订阅模式
+Relative time-ago parsing in TypeScript|TypeScript中的相对时间解析
+Replace all VNese letters with the corresponding English accents|将越南语字母替换为相应的英文字母
+Markdown Code block's basic and advanced syntaxes|Markdown代码块的基本和高级语法
+How to kill a process running on a specific port on macOS|如何在macOS上终止运行在特定端口上的进程
+How to rename a case-sensitive file in a git repository|如何在Git仓库中重命名区分大小写的文件 

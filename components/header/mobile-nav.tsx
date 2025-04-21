@@ -20,7 +20,7 @@ export function MobileNav() {
       if (status) {
         enableBodyScroll(navRef.current)
       } else {
-        // Prevent scrolling
+        // 防止滚动
         disableBodyScroll(navRef.current)
       }
       return !status
@@ -40,7 +40,7 @@ export function MobileNav() {
         ])}
         data-umami-event="mobile-nav-toggle"
       >
-        <button aria-label="Toggle Menu" onClick={onToggleNav}>
+        <button aria-label="切换菜单" onClick={onToggleNav}>
           <Menu size={22} />
         </button>
       </div>
@@ -91,7 +91,7 @@ export function MobileNav() {
               </nav>
               <button
                 className="fixed right-4 top-5 z-80 h-16 w-16 p-4 text-gray-900 hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-400"
-                aria-label="Toggle Menu"
+                aria-label="切换菜单"
                 onClick={onToggleNav}
               >
                 <X className="h-7 w-7" strokeWidth={1.5} />

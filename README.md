@@ -51,3 +51,52 @@ Thanks for the free resources 🙏
 ---
 
 Copyright (c) 2024 - Leo's dev blog – stories, insights, and ideas.
+
+# 中文开发者字体配置
+
+为了提升中国开发者的代码阅读和编写体验，本项目使用了专门的字体配置，使中英文能够更加和谐地展示。
+
+## 字体选择
+
+本项目使用的字体组合为：
+
+### 编程字体 (等宽字体)
+
+- **JetBrains Mono**: 主要编程字体，适合代码显示
+- **Sarasa Mono SC (更纱黑体)**: 优秀的中英文等宽字体，保持2:1比例
+- **Source Han Sans HW SC (思源黑体等宽)**: Adobe开发的高质量中文等宽字体
+- **Microsoft YaHei Mono (微软雅黑等宽)**: 微软开发的中英文混合等宽字体
+
+### 正文字体
+
+- **Source Han Sans SC (思源黑体)**: 优秀的中文无衬线字体
+- **Noto Sans SC**: Google开发的全语言无衬线字体
+- **PingFang SC (苹方)**: Apple系统默认中文字体
+- **Microsoft YaHei (微软雅黑)**: Windows系统默认中文字体
+
+## 等宽比例
+
+为保证代码对齐，我们使用了支持中英文2:1宽度比例的等宽字体：
+
+- 英文字符宽度: 1单位
+- 中文字符宽度: 2单位
+
+这样可以确保在代码和注释混合中英文时保持完美对齐。
+
+## 如何更新
+
+若需要更改默认字体配置，请修改以下文件：
+
+1. `css/cjk-font.css`: 中文字体主要配置
+2. `app/layout.tsx`: 字体加载和变量定义
+3. `tailwind.config.js`: 应用于Tailwind组件的字体配置
+
+## 字体资源
+
+- JetBrains Mono: https://www.jetbrains.com/lp/mono/
+- 思源黑体/Source Han Sans: https://github.com/adobe-fonts/source-han-sans
+- 更纱黑体/Sarasa Gothic: https://github.com/be5invis/Sarasa-Gothic
+
+---
+
+_注: 某些字体需要单独下载安装到系统中才能生效。_

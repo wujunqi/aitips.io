@@ -1,8 +1,8 @@
 ---
-title: 'Integrating Tailwind CSS into a React Application'
+title: '将Tailwind CSS集成到React应用中'
 date: '2020-08-31'
 tags: ['tailwind-css', 'react', 'postcss', 'integration']
-summary: 'Tailwind CSS is a low-level CSS framework that’s highly customizable. Unlike other frameworks that focus on pre-designed components like buttons, cards, or modals, which are easy to start with but hard to customize later, Tailwind lets you build your own designs from scratch using utility classes...'
+summary: 'Tailwind CSS is a low-level CSS framework that's highly customizable. Unlike other frameworks that focus on pre-designed components like buttons, cards, or modals, which are easy to start with but hard to customize later, Tailwind lets you build your own designs from scratch using utility classes...'
 images:
   [
     '/static/images/banners/shallow-focus-photography-of-potted-plants__fredmarriage__UcfKYTan-LU.jpeg',
@@ -10,9 +10,9 @@ images:
 authors: ['default']
 ---
 
-[Tailwind CSS](https://tailwindcss.com/) is a **low-level** CSS framework that’s highly customizable. Unlike other frameworks or UI kits that provide pre-designed components (buttons, cards, modals, etc.) to help you get started quickly but can be cumbersome to customize later, Tailwind focuses on low-level utility classes (**utility-first**), allowing you to build your own design without worrying about **overriding** existing **styles**.
+[Tailwind CSS](https://tailwindcss.com/) is a **low-level** CSS framework that's highly customizable. Unlike other frameworks or UI kits that provide pre-designed components (buttons, cards, modals, etc.) to help you get started quickly but can be cumbersome to customize later, Tailwind focuses on low-level utility classes (**utility-first**), allowing you to build your own design without worrying about **overriding** existing **styles**.
 
-In this post, I’ll guide you on how to integrate Tailwind CSS into a React app <Twemoji emoji="beaming-face-with-smiling-eyes" />
+In this post, I'll guide you on how to integrate Tailwind CSS into a React app <Twemoji emoji="beaming-face-with-smiling-eyes" />
 
 ## Create a React App
 
@@ -33,7 +33,7 @@ yarn add tailwindcss postcss-cli autoprefixer -D
 ## or npm install tailwindcss postcss-cli autoprefixer --save-dev
 ```
 
-Besides Tailwind CSS, we’ll also install:
+Besides Tailwind CSS, we'll also install:
 
 - [PostCSS](https://github.com/postcss/postcss): A tool for analyzing and transforming styling using JS plugins, which helps with CSS suggestions, supporting variables and mixins, compiling new CSS features, etc.
 - [Autoprefixer](https://github.com/postcss/autoprefixer): A PostCSS plugin that automatically adds [vendor prefix](https://www.lifewire.com/css-vendor-prefixes-3466867) (`-webkit-`, `-moz-`, `-ms-`, `-o-`, etc.) based on data from **Can I Use** to ensure your CSS works on multiple browsers.
@@ -90,7 +90,7 @@ Open the `package.json` file and add the following build script (inside the scri
 
 This script uses **PostCSS CLI** to build the CSS based on the config in the `tailwind.css` file, with the output (flag `-o`) as `main.css`.
 
-You can choose the file name and location as you like. Here, I’m putting both the input config file and output in the same folder: `src/styles`.
+You can choose the file name and location as you like. Here, I'm putting both the input config file and output in the same folder: `src/styles`.
 
 Now you can manually trigger the build with the command:
 
@@ -173,7 +173,7 @@ function App() {
 export default App
 ```
 
-Here’s the result <Twemoji emoji="party-popper" /> <Twemoji emoji="party-popper" />
+Here's the result <Twemoji emoji="party-popper" /> <Twemoji emoji="party-popper" />
 
 ![Tailwind css result](/static/images/messi.jpg)
 

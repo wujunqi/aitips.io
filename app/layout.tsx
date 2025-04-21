@@ -2,6 +2,7 @@ import 'css/tailwind.css'
 import 'css/twemoji.css'
 import 'react-medium-image-zoom/dist/styles.css'
 import 'remark-github-blockquote-alert/alert.css'
+import '../css/cjk-font.css'
 
 import clsx from 'clsx'
 import type { Metadata } from 'next'
@@ -13,6 +14,7 @@ import { KBarSearchProvider } from '~/components/search/kbar-provider'
 import { TiltedGridBackground } from '~/components/ui/tilted-grid-background'
 import { SITE_METADATA } from '~/data/site-metadata'
 import { ThemeProviders } from './theme-providers'
+import localFont from 'next/font/local'
 
 const FONT_PLAYPEN_SANS = Playpen_Sans({
   subsets: ['latin'],
@@ -37,6 +39,35 @@ const FONT_JETBRAINS_MONO = JetBrains_Mono({
   variable: '--font-jetbrains-mono',
 })
 
+// 添加Source Han Sans字体
+const FONT_SOURCE_HAN_SANS = localFont({
+  src: [
+    {
+      path: '../fonts/SourceHanSansCN-Regular.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/SourceHanSansCN-Medium.otf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/SourceHanSansCN-Bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-source-han-sans',
+  display: 'swap',
+})
+
+// 添加适合中文显示的字体配置
+const FONT_FALLBACK_CSS = {
+  fontFallback: `var(--font-jetbrains-mono), 'Source Han Sans SC', 'Noto Sans SC', 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', sans-serif`,
+  codeFontFallback: `var(--font-jetbrains-mono), 'Source Han Sans SC', 'Noto Sans SC', 'Microsoft YaHei', monospace`,
+}
+
 export let metadata: Metadata = {
   metadataBase: new URL(SITE_METADATA.siteUrl),
   title: {
@@ -50,7 +81,7 @@ export let metadata: Metadata = {
     url: './',
     siteName: SITE_METADATA.title,
     images: [SITE_METADATA.socialBanner],
-    locale: 'en_US',
+    locale: 'zh-CN',
     type: 'website',
   },
   alternates: {
@@ -90,6 +121,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         FONT_PLAYPEN_SANS.variable
       )}
       suppressHydrationWarning
+      style={
+        {
+          '--font-fallback': FONT_FALLBACK_CSS.fontFallback,
+          '--code-font-fallback': FONT_FALLBACK_CSS.codeFontFallback,
+        } as React.CSSProperties
+      }
     >
       <link rel="apple-touch-icon" sizes="76x76" href={`${basePath}/static/favicons/favicon.ico`} />
       <link

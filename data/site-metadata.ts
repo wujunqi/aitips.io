@@ -1,10 +1,9 @@
 export const SITE_METADATA = {
-  title: `Leo's dev blog – stories, insights, and ideas`,
-  author: 'Leo Huynh',
-  headerTitle: `Leo's dev blog`,
-  description:
-    'A personal space on the cloud where I document my programming journey, sharing lessons, insights, and resources for fellow developers.',
-  language: 'en-us',
+  title: `李奥的开发博客 – 故事，见解和想法`,
+  author: '李奥·黄',
+  headerTitle: `李奥的开发博客`,
+  description: '我在云端的个人空间，记录我的编程之旅，为开发者同行分享经验、见解和资源。',
+  language: 'zh-cn',
   theme: 'system', // system, dark or light
   siteUrl: 'https://www.leohuynh.dev',
   siteRepo: 'https://github.com/hta218/leohuynh.dev',
@@ -18,7 +17,7 @@ export const SITE_METADATA = {
   linkedin: 'https://www.linkedin.com/in/hta218',
   threads: 'https://www.threads.net/hta218_',
   instagram: 'https://www.instagram.com/hta218_',
-  locale: 'en-US',
+  locale: 'zh-CN',
   stickyNav: true,
   goodreadsBookshelfUrl: 'https://www.goodreads.com/review/list/179720035-leo-huynh',
   goodreadsFeedUrl: 'https://www.goodreads.com/review/list_rss/179720035',
@@ -46,7 +45,7 @@ export const SITE_METADATA = {
       theme: 'light',
       darkTheme: 'transparent_dark',
       themeURL: '',
-      lang: 'en',
+      lang: 'zh-cn',
     },
   },
   search: {
