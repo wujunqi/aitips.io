@@ -4,6 +4,6 @@
       "source": "/stats/:match*",
       "destination": "https://analytics.leohuynh.dev/:match*"
     },
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
