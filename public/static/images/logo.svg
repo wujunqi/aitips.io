@@ -1,0 +1,74 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- 渐变定义 -->
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="50%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+    
+    <radialGradient id="glowGradient" cx="60" cy="20" r="20" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9" />
+      <stop offset="70%" stop-color="#A855F7" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#A855F7" stop-opacity="0" />
+    </radialGradient>
+    
+    <linearGradient id="beamGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#A855F7" stop-opacity="0" />
+    </linearGradient>
+    
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- 发光效果 -->
+  <circle cx="60" cy="20" r="20" fill="url(#glowGradient)" opacity="0.7" />
+  
+  <!-- 灯塔光束 - 左侧 -->
+  <path d="M60 30 L15 5 L60 30" fill="url(#beamGradient)" opacity="0.5" transform="rotate(180, 60, 30)" />
+  
+  <!-- 灯塔光束 - 右侧 -->
+  <path d="M60 30 L105 5 L60 30" fill="url(#beamGradient)" opacity="0.5" />
+  
+  <!-- 灯塔底座 - 装饰边框 -->
+  <path d="M38 94 L82 94 L80 100 L40 100 Z" fill="#2D3748" />
+  
+  <!-- 灯塔底座 - 主体 -->
+  <path d="M40 90 L80 90 L77 97 L43 97 Z" fill="url(#logoGradient)" />
+  
+  <!-- 灯塔主体 -->
+  <path d="M45 30 L75 30 L72 90 L48 90 Z" fill="url(#logoGradient)" />
+  
+  <!-- 灯塔水平条纹装饰 -->
+  <path d="M45 45 L75 45" stroke="#FFFFFF" stroke-width="0.5" opacity="0.5" />
+  <path d="M45 60 L75 60" stroke="#FFFFFF" stroke-width="0.5" opacity="0.5" />
+  <path d="M45 75 L75 75" stroke="#FFFFFF" stroke-width="0.5" opacity="0.5" />
+  
+  <!-- 灯塔顶部 -->
+  <path d="M42 30 L78 30 L70 20 L50 20 Z" fill="url(#logoGradient)" />
+  
+  <!-- 灯塔灯光 -->
+  <circle cx="60" cy="14" r="8" fill="#FFFFFF" filter="url(#glow)" />
+  <circle cx="60" cy="14" r="4" fill="#FFFFFF" />
+  
+  <!-- 数字电路元素 -->
+  <g opacity="0.8">
+    <path d="M52 36 L42 55 M68 36 L78 55" stroke="#FFFFFF" stroke-width="0.8" />
+    <path d="M42 55 L55 80 M78 55 L65 80" stroke="#FFFFFF" stroke-width="0.8" />
+    <path d="M55 80 L65 80" stroke="#FFFFFF" stroke-width="0.8" />
+    
+    <circle cx="52" cy="36" r="1.5" fill="#FFFFFF" />
+    <circle cx="68" cy="36" r="1.5" fill="#FFFFFF" />
+    <circle cx="42" cy="55" r="1.5" fill="#FFFFFF" />
+    <circle cx="78" cy="55" r="1.5" fill="#FFFFFF" />
+    <circle cx="55" cy="80" r="1.5" fill="#FFFFFF" />
+    <circle cx="65" cy="80" r="1.5" fill="#FFFFFF" />
+    
+    <!-- AI字母 -->
+    <path d="M56 50 L60 42 L64 50" stroke="#FFFFFF" stroke-width="1.2" fill="none" />
+    <path d="M54 48 L66 48" stroke="#FFFFFF" stroke-width="1.2" fill="none" />
+  </g>
+</svg>

@@ -2,12 +2,12 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Search } from 'lucide-react'
+import { Search, Sparkles, Star } from 'lucide-react'
 import { Twemoji } from '~/components/ui/twemoji'
 
 const popularTopics = [
-  { name: 'React', href: '/tags/react' },
-  { name: 'TypeScript', href: '/tags/typescript' },
+  { name: 'RAG', href: '/tags/rag' },
+  { name: '面试题', href: '/tags/interview' },
   { name: 'Next.js', href: '/tags/nextjs' },
   { name: 'JavaScript', href: '/tags/javascript' },
   { name: '人工智能', href: '/tags/ai' },
@@ -40,7 +40,7 @@ export function WelcomeSection() {
           <form onSubmit={handleSearch} className="relative mx-auto max-w-3xl">
             <input
               type="text"
-              placeholder="搜索文章、代码片段和教程..."
+              placeholder="搜索文章、教程..."
               className="w-full rounded-full border-0 bg-white/90 px-5 py-4 pr-12 text-gray-700 shadow-md backdrop-blur-sm transition-all focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-800/60 dark:text-gray-200 dark:focus:bg-gray-800/90"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -73,7 +73,11 @@ export function WelcomeSection() {
         {/* 精选内容 */}
         <div className="overflow-hidden rounded-xl bg-white/90 p-6 shadow-md backdrop-blur-sm transition-all dark:bg-gray-800/70">
           <h2 className="flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-white">
-            <Twemoji emoji="fire" /> 精选推荐
+            <span className="flex items-center">
+              <Sparkles className="h-5 w-5 text-yellow-500" />
+              <Twemoji emoji="fire" className="mx-1" />
+            </span>
+            精选推荐
           </h2>
           <div className="mt-4 overflow-hidden rounded-lg border border-indigo-100 bg-indigo-50/80 p-5 transition-all hover:bg-indigo-100/50 dark:border-indigo-900/50 dark:bg-indigo-900/30 dark:hover:bg-indigo-900/40">
             <h3 className="mb-2 font-semibold text-indigo-800 dark:text-indigo-300">

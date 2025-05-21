@@ -14,7 +14,7 @@ export function FooterBottom() {
       ])}
     >
       <div className="text-center md:text-left">
-        © {new Date().getFullYear()} 技术沉思录. 保留所有权利.
+        © {new Date().getFullYear()} 技术领航站. 保留所有权利.
       </div>
       <div className="flex items-center space-x-4">
         <Link

@@ -2,7 +2,6 @@ import { clsx } from 'clsx'
 import { Container } from '~/components/ui/container'
 import { Link } from '~/components/ui/link'
 import { GrowingUnderline } from '~/components/ui/growing-underline'
-import { FOOTER_NAV_LINKS, FOOTER_PERSONAL_STUFF } from '~/data/navigation'
 import { FooterBottom } from './footer-bottom'
 
 export function Footer() {
@@ -16,10 +15,9 @@ export function Footer() {
           'p-6 text-gray-700 dark:text-gray-300',
         ])}
       >
-        {/* 技术沉思录 */}
         <div className="col-span-1 space-y-4">
-          <div className="text-lg font-bold text-indigo-800 dark:text-indigo-400">技术沉思录</div>
-          <div className="text-sm">一个专注于技术深度与思考的程序员博客。</div>
+          <div className="text-lg font-bold text-indigo-800 dark:text-indigo-400">技术领航站</div>
+          <div className="text-sm">探索前沿技术，提升编程技能，分享实用经验。</div>
           <div className="flex space-x-4 pt-2">
             <Link
               href="#"
@@ -100,7 +98,7 @@ export function Footer() {
             </li>
             <li>
               <Link
-                href="/snippets"
+                href="/blog/categories/interview"
                 className="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
               >
                 <GrowingUnderline>面试经验</GrowingUnderline>
@@ -108,18 +106,10 @@ export function Footer() {
             </li>
             <li>
               <Link
-                href="/about"
+                href="https://mianshizhushou.com"
                 className="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
               >
-                <GrowingUnderline>关于我们</GrowingUnderline>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/tags"
-                className="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
-              >
-                <GrowingUnderline>投稿指南</GrowingUnderline>
+                <GrowingUnderline>Offer蛙官网</GrowingUnderline>
               </Link>
             </li>
           </ul>
@@ -131,15 +121,23 @@ export function Footer() {
           <ul className="space-y-2 text-sm">
             <li>
               <Link
-                href="/blog/category/interview"
+                href="/blog/categories/interview"
                 className="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
               >
-                <GrowingUnderline>面试题专区</GrowingUnderline>
+                <GrowingUnderline>面试经验专区</GrowingUnderline>
               </Link>
             </li>
             <li>
               <Link
-                href="/blog/category/backend"
+                href="/blog/categories/algorithm"
+                className="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
+              >
+                <GrowingUnderline>算法与数据结构专区</GrowingUnderline>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/blog/categories/backend"
                 className="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
               >
                 <GrowingUnderline>后端架构专区</GrowingUnderline>
@@ -147,26 +145,10 @@ export function Footer() {
             </li>
             <li>
               <Link
-                href="/blog/category/frontend"
-                className="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
-              >
-                <GrowingUnderline>前端移动专区</GrowingUnderline>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/blog/category/ai"
+                href="/blog/categories/ai"
                 className="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
               >
                 <GrowingUnderline>AI-大数据专区</GrowingUnderline>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/blog/category/product"
-                className="transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
-              >
-                <GrowingUnderline>产品运营专区</GrowingUnderline>
               </Link>
             </li>
           </ul>

@@ -8,9 +8,31 @@ import {
   useRegisterActions,
   type Action,
 } from 'kbar'
+import { useRouter } from 'next/navigation'
+import { useCallback, useState } from 'react'
 
 export function KBarModal({ actions, isLoading }: { actions: Action[]; isLoading: boolean }) {
   useRegisterActions(actions, [actions])
+  const router = useRouter()
+  const [searchTerm, setSearchTerm] = useState('')
+
+  // 处理搜索表单提交
+  const handleSearchSubmit = useCallback(
+    (e: React.KeyboardEvent) => {
+      if (e.key === 'Enter' && searchTerm.trim()) {
+        e.preventDefault()
+        router.push(`/search?q=${encodeURIComponent(searchTerm.trim())}`)
+
+        // 关闭kbar搜索框
+        const event = new KeyboardEvent('keydown', {
+          key: 'Escape',
+          bubbles: true,
+        })
+        document.dispatchEvent(event)
+      }
+    },
+    [router, searchTerm]
+  )
 
   return (
     <KBarPortal>
@@ -34,15 +56,22 @@ export function KBarModal({ actions, isLoading }: { actions: Action[]; isLoading
                   />
                 </svg>
               </span>
-              <KBarSearch className="h-8 w-full bg-transparent text-gray-600 placeholder-gray-400 focus:outline-none dark:text-gray-200 dark:placeholder-gray-500" />
+              <KBarSearch
+                className="h-8 w-full bg-transparent text-gray-600 placeholder-gray-400 focus:outline-none dark:text-gray-200 dark:placeholder-gray-500"
+                onChange={(event) => setSearchTerm(event.target.value)}
+                onKeyDown={handleSearchSubmit}
+              />
               <kbd className="inline-block whitespace-nowrap rounded border border-gray-400 px-1.5 align-middle text-xs font-medium leading-4 tracking-wide text-gray-400">
                 ESC
               </kbd>
             </div>
+            <div className="border-t border-gray-100 px-2 py-2 text-sm text-gray-500 dark:border-gray-800">
+              提示: 按 Enter 键执行常规搜索
+            </div>
             {!isLoading && <RenderResults />}
             {isLoading && (
               <div className="block border-t border-gray-100 px-4 py-8 text-center text-gray-400 dark:border-gray-800 dark:text-gray-600">
-                Loading...
+                加载中...
               </div>
             )}
           </div>
@@ -107,7 +136,7 @@ function RenderResults() {
   } else {
     return (
       <div className="block border-t border-gray-100 px-4 py-8 text-center text-gray-400 dark:border-gray-800 dark:text-gray-600">
-        No results for your search...
+        未找到搜索结果...
       </div>
     )
   }

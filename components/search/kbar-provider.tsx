@@ -48,15 +48,25 @@ export function KBarSearchProvider({
     }
     async function fetchData() {
       if (searchDocumentsPath) {
-        let url =
-          searchDocumentsPath.indexOf('://') > 0 || searchDocumentsPath.indexOf('//') === 0
-            ? searchDocumentsPath
-            : new URL(searchDocumentsPath, window.location.origin)
-        let res = await fetch(url)
-        let json = await res.json()
-        let actions = onSearchDocumentsLoad ? onSearchDocumentsLoad(json) : mapPosts(json)
-        setSearchActions(actions)
-        setDataLoaded(true)
+        try {
+          let url = searchDocumentsPath
+          if (!searchDocumentsPath.startsWith('http') && !searchDocumentsPath.startsWith('/')) {
+            url = `/${searchDocumentsPath}`
+          }
+          console.log('Fetching search data from:', url)
+          let res = await fetch(url)
+          if (!res.ok) {
+            throw new Error(`Failed to fetch search data: ${res.status} ${res.statusText}`)
+          }
+          let json = await res.json()
+          let actions = onSearchDocumentsLoad ? onSearchDocumentsLoad(json) : mapPosts(json)
+          setSearchActions(actions)
+          setDataLoaded(true)
+          console.log('Search data loaded successfully')
+        } catch (error) {
+          console.error('Error loading search data:', error)
+          setDataLoaded(true)
+        }
       }
     }
     if (!dataLoaded && searchDocumentsPath) {
